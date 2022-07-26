@@ -18,9 +18,10 @@ public class DepositAccount extends BankAccount {
         if (LocalDate.now().isAfter(dateCanTake)) {
             super.take(amountToTake);
             return true;
-        } else
+        } else {
             System.out.println("Вы сможете снять деньги со счета после " + dateCanTake);
-        return false;
+            return false;
+        }
     }
 
     @Override
